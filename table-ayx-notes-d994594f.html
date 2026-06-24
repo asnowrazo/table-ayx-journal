@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资料整理索引 · ayx</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f6faf9;
+      color: #1f2b2a;
+      line-height: 1.6;
+      padding: 1.5rem 1rem 3rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .page {
+      max-width: 960px;
+      width: 100%;
+    }
+
+    /* 开场短句 —— 隐喻资料河流 */
+    .hero-tagline {
+      text-align: center;
+      padding: 2.8rem 0 1.2rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      color: #2f7068;
+      border-bottom: 1px solid rgba(48, 128, 120, 0.2);
+      margin-bottom: 2rem;
+    }
+    .hero-tagline strong {
+      font-weight: 500;
+      background: #d9f0ec;
+      padding: 0.1rem 0.4rem;
+      border-radius: 6px;
+      color: #1d5b54;
+    }
+
+    /* 承接段落 – 卡片网格用于索引说明 */
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.6rem;
+      margin-bottom: 2.2rem;
+    }
+    .intro-card {
+      background: white;
+      padding: 1.5rem 1.3rem;
+      border-radius: 24px;
+      box-shadow: 0 4px 12px rgba(0, 30, 20, 0.04);
+      border: 1px solid #d6eae6;
+      transition: box-shadow 0.2s;
+    }
+    .intro-card:hover {
+      box-shadow: 0 6px 20px rgba(0, 60, 50, 0.06);
+    }
+    .intro-card h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #1d7368;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .intro-card p {
+      font-size: 0.95rem;
+      color: #2e4a46;
+    }
+
+    /* 特点列表 —— 清爽纵向 */
+    .feature-section {
+      margin: 2rem 0 2.5rem;
+      background: #ffffffd6;
+      backdrop-filter: blur(2px);
+      padding: 1.8rem 1.5rem;
+      border-radius: 32px;
+      border: 1px solid #c7e3dd;
+    }
+    .feature-section h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #1d5f57;
+      margin-bottom: 1.4rem;
+      letter-spacing: 1px;
+    }
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+    .feature-item {
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px dashed #d1e3df;
+    }
+    .feature-item:last-child { border-bottom: none; }
+    .feature-marker {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #319c8b;
+      border-radius: 2px;
+      flex-shrink: 0;
+      margin-top: 0.4rem;
+    }
+    .feature-text {
+      font-size: 0.98rem;
+      color: #1f3935;
+    }
+    .feature-text span {
+      background: #e7f5f1;
+      padding: 0 0.3rem;
+      border-radius: 4px;
+      color: #17685c;
+      font-weight: 450;
+    }
+
+    /* 温和结尾 + FAQ 摘要风格 */
+    .closing-block {
+      background: #eef7f4;
+      padding: 1.8rem 1.5rem;
+      border-radius: 32px;
+      margin-top: 0.8rem;
+    }
+    .closing-block p {
+      font-size: 0.96rem;
+      color: #204540;
+      margin-bottom: 0.6rem;
+    }
+    .closing-block .faq-summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      margin-top: 1.2rem;
+    }
+    .faq-item {
+      flex: 1 0 180px;
+      background: white;
+      border-radius: 20px;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 2px 6px rgba(0,30,20,0.02);
+    }
+    .faq-item strong {
+      display: block;
+      font-weight: 500;
+      color: #1a7063;
+      font-size: 0.85rem;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.3px;
+    }
+    .faq-item span {
+      font-size: 0.88rem;
+      color: #2b534b;
+    }
+
+    /* 链接自然嵌入句子 */
+    .inline-link-highlight {
+      background: #daefe9;
+      padding: 0.1rem 0.3rem;
+      border-radius: 6px;
+      color: #1c675b;
+      text-decoration: none;
+      font-weight: 450;
+      border-bottom: 1px solid #309481;
+    }
+    .inline-link-highlight:visited { color: #1c675b; }
+    .inline-link-highlight:hover { background: #c1e4db; }
+
+    /* 小注 */
+    .footnote {
+      margin-top: 2.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #5f7a75;
+      border-top: 1px solid #cde0db;
+      padding-top: 1.2rem;
+    }
+
+    /* 移动端友好 */
+    @media (max-width: 640px) {
+      body { padding: 1rem 0.8rem 2.5rem; }
+      .intro-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .feature-section { padding: 1.4rem 1rem; }
+      .closing-block { padding: 1.4rem 1rem; }
+      .faq-item { flex: 1 0 100%; }
+      .hero-tagline { padding: 1.8rem 0 0.8rem; font-size: 1rem; }
+    }
+    @media (max-width: 400px) {
+      .feature-item { gap: 0.4rem; }
+      .intro-card { padding: 1.2rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 开场短句：资料整理与索引流向 -->
+  <div class="hero-tagline">
+    一页索引，整理散落的信息。<br>
+    从标记、归类到回溯 —— <strong>ayx</strong> 保持着资料的脉络。
+  </div>
+
+  <!-- 承接段落：卡片网格，表述索引场景 -->
+  <div class="intro-grid">
+    <div class="intro-card">
+      <h3>📎 分类与锚点</h3>
+      <p>每一条记录都可以附加标签、日期和来源。不依赖文件夹结构，用关键词把相关内容串联起来，检索时更贴近记忆习惯。</p>
+    </div>
+    <div class="intro-card">
+      <h3>🧩 交叉引用</h3>
+      <p>资料之间可以建立简单的关联，比如将会议记录链接到对应的项目文档。索引本身也是一张轻量的知识图谱。</p>
+    </div>
+    <div class="intro-card">
+      <h3>📄 快照与原文</h3>
+      <p>保存原始链接或本地路径的同时，支持摘录关键段落。即使原文失效，索引中的描述依然能保留内容轮廓。</p>
+    </div>
+    <div class="intro-card">
+      <h3>🔍 渐进整理</h3>
+      <p>不必一开始就追求完美分类。先收录，再逐步调整标签和分组，整理是伴随使用自然生长的过程。</p>
+    </div>
+  </div>
+
+  <!-- 特点列表：围绕资料整理和信息索引 -->
+  <div class="feature-section">
+    <h2>· 信息索引的几个习惯 ·</h2>
+    <div class="feature-list">
+      <div class="feature-item">
+        <span class="feature-marker"></span>
+        <div class="feature-text">把 <span>临时记录</span> 和 <span>长期条目</span> 分开存放，避免索引变得杂乱。</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-marker"></span>
+        <div class="feature-text">为常用标签设置简短的缩写，比如用 <span>「mtg」</span> 表示会议，减少输入负担。</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-marker"></span>
+        <div class="feature-text">每周花十分钟清理过期或重复的记录，保持索引的轻量与准确。</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-marker"></span>
+        <div class="feature-text">对重要资料添加一条 <span>「为什么保留」</span> 的备注，方便日后判断是否仍需要它。</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-marker"></span>
+        <div class="feature-text">索引结构最好能随时调整，不要被一开始的分类框住。整理是动态的。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 温和结尾 + FAQ 摘要 -->
+  <div class="closing-block">
+    <p>资料整理不是一项需要完成的任务，而是一种可以逐渐养成的背景习惯。一两条记录，一个标签，一次链接，都不必追求完美。随着时间的推移，索引会自然反映出你真正关注的内容。</p>
+    <p>如果你正在寻找一个轻量、可自行维护的索引工具，<a href="https://table-ayx.com.cn" class="inline-link-highlight">ayx</a> 提供了一种基于表格与标签的整理方式，不依赖复杂的功能，专注于记录与回溯本身。</p>
+
+    <div class="faq-summary">
+      <div class="faq-item">
+        <strong>❔ 适合整理什么</strong>
+        <span>读书笔记、项目资料、会议记录、灵感片段、收藏链接等。</span>
+      </div>
+      <div class="faq-item">
+        <strong>❔ 需要先分类吗</strong>
+        <span>不需要。先收录，用标签自然聚合，分类可以在后期调整。</span>
+      </div>
+      <div class="faq-item">
+        <strong>❔ 多人能否共用</strong>
+        <span>索引以页面形式存在，适合个人或小团队通过共享链接协作。</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footnote">
+    ——— 索引服务于记忆，而非替代记忆 ———
+  </div>
+
+</div>
+</body>
+</html>
