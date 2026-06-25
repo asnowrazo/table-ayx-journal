@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>500彩票网 · 站点说明与知识索引</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #fafafa;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #1d1d1f;
+      line-height: 1.7;
+      padding: 2.4rem 1.2rem;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* header / hero */
+    .site-header {
+      margin-bottom: 2.8rem;
+      border-bottom: 2px solid #e8e8ed;
+      padding-bottom: 1rem;
+    }
+    .site-header h1 {
+      font-size: 2.2rem;
+      font-weight: 560;
+      letter-spacing: -0.02em;
+      color: #111;
+      margin-bottom: 0.2rem;
+    }
+    .site-header .subhead {
+      font-size: 1rem;
+      color: #6e6e73;
+      font-weight: 400;
+    }
+
+    /* 通用卡片样式 */
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 1.8rem 1.8rem 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 2px 8px rgba(0,0,0,0.03);
+      margin-bottom: 2rem;
+      border: 1px solid #f0f0f2;
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 580;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      color: #1d1d1f;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .card-title i {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: #007aff;
+      border-radius: 50%;
+      margin-right: 0.3rem;
+    }
+
+    /* 说明区 */
+    .intro-text p {
+      margin-bottom: 0.9rem;
+      font-size: 0.98rem;
+      color: #2c2c2e;
+    }
+    .intro-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 目录感网格布局 */
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 520px) {
+      .grid-2col { grid-template-columns: 1fr; }
+    }
+    .topic-item {
+      background: #f8f8fa;
+      border-radius: 14px;
+      padding: 1.2rem 1.2rem 1.2rem 1.4rem;
+      transition: background 0.2s;
+      border-left: 4px solid #d2d2d7;
+    }
+    .topic-item h3 {
+      font-size: 0.95rem;
+      font-weight: 550;
+      margin-bottom: 0.3rem;
+      color: #1c1c1e;
+    }
+    .topic-item p {
+      font-size: 0.85rem;
+      color: #6e6e73;
+      line-height: 1.5;
+    }
+
+    /* 提示区 */
+    .notice {
+      background: #fffbe9;
+      border-left: 5px solid #f5a623;
+      border-radius: 12px;
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 2rem;
+    }
+    .notice strong {
+      color: #b5731a;
+    }
+
+    /* 相关信息区 */
+    .info-list {
+      list-style: none;
+      font-size: 0.92rem;
+    }
+    .info-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ebebed;
+      display: flex;
+      gap: 0.8rem;
+      align-items: baseline;
+    }
+    .info-list li:last-child {
+      border-bottom: none;
+    }
+    .info-label {
+      min-width: 4.8rem;
+      font-weight: 480;
+      color: #6e6e73;
+    }
+
+    /* FAQ 摘要 */
+    .faq-item {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid #eaeaea;
+    }
+    .faq-item:last-of-type {
+      border-bottom: none;
+    }
+    .faq-q {
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+    .faq-a {
+      font-size: 0.88rem;
+      color: #515154;
+    }
+
+    /* 链接样式 */
+    a {
+      color: #007aff;
+      text-decoration: none;
+      font-weight: 450;
+      border-bottom: 1px solid transparent;
+      transition: border 0.2s;
+    }
+    a:hover {
+      border-bottom-color: #007aff;
+    }
+
+    hr {
+      margin: 2rem 0 1.5rem;
+      border: 0;
+      height: 1px;
+      background: #e3e3e8;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #8e8e93;
+      margin-top: 2.5rem;
+      border-top: 1px solid #e8e8ed;
+      padding-top: 1.5rem;
+    }
+
+    /* 窄正文控制 */
+    .narrow {
+      max-width: 640px;
+    }
+
+    /* 点缀 */
+    .badge {
+      display: inline-block;
+      background: #e9e9ed;
+      padding: 0.2rem 0.7rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #3a3a3c;
+      margin-left: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- hero 标题区域 -->
+  <header class="site-header">
+    <h1>500彩票网 · 信息指引</h1>
+    <div class="subhead">站点介绍 · 可信说明 · 知识索引</div>
+  </header>
+
+  <!-- 介绍区：站点概述与可信说明 -->
+  <div class="card intro-text">
+    <div class="card-title"><i></i> 关于本平台</div>
+    <p>
+      <a href="https://china-main-500.com">500彩票网</a> 是一个以彩票资讯、数据查询及彩种介绍为主要内容的站点。平台聚焦于提供行业动态、历史开奖参考以及相关规则说明，帮助用户更清晰地了解不同彩种的基础信息。不涉及任何实时投注或资金交易，仅作为信息聚合与索引页面存在。
+    </p>
+    <p>
+      所有内容均整理自公开资料与官方发布，力求准确、中立。站点不提供“必中”“包赢”等承诺，也不引导用户进行非理性行为。建议浏览者保持独立判断，理性对待彩票活动。
+    </p>
+  </div>
+
+  <!-- 目录感布局：知识分类卡片 -->
+  <div class="card">
+    <div class="card-title"><i></i> 内容目录</div>
+    <div class="grid-2col">
+      <div class="topic-item">
+        <h3>彩种规则</h3>
+        <p>双色球、大乐透、福彩3D、排列三等常见玩法说明与术语解释。</p>
+      </div>
+      <div class="topic-item">
+        <h3>数据统计</h3>
+        <p>历史开奖号码分布、冷热号分析、和值走势等基础统计图表。</p>
+      </div>
+      <div class="topic-item">
+        <h3>行业资讯</h3>
+        <p>彩票政策调整、派奖活动、公益金动向等简明信息聚合。</p>
+      </div>
+      <div class="topic-item">
+        <h3>相关站点</h3>
+        <p>官方机构链接、正规彩票平台导航，仅作信息参考。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 提示区：谨慎提示 -->
+  <div class="notice">
+    <strong>重要提示</strong>：彩票为公益娱乐性质，购彩应量力而行。本站不提供在线购彩或代购服务，所有信息仅供查阅。如涉及实际投注，请务必通过合法正规渠道。
+  </div>
+
+  <!-- 相关信息区（两列布局，左侧标签右侧内容） -->
+  <div class="card">
+    <div class="card-title"><i></i> 相关信息</div>
+    <ul class="info-list">
+      <li><span class="info-label">站点性质</span> 彩票信息聚合与知识索引</li>
+      <li><span class="info-label">内容来源</span> 官方公告、公开数据、行业媒体</li>
+      <li><span class="info-label">更新频率</span> 每周数次，根据开奖日历同步</li>
+      <li><span class="info-label">特色栏目</span> 玩法解析 · 术语库 · 号码冷热</li>
+      <li><span class="info-label">联系反馈</span> 页面底部表单（开发中）</li>
+    </ul>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="card">
+    <div class="card-title"><i></i> 常见问题摘要</div>
+    <div class="faq-item">
+      <div class="faq-q">❓ 这里能直接买彩票吗？</div>
+      <div class="faq-a">不能。本页面仅提供信息介绍，不涉及交易。购买请认准省级彩票中心授权站点。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">❓ 数据是否可靠？</div>
+      <div class="faq-a">所有开奖数据均来自官方渠道，并会标注数据来源。但因时间差异，建议交叉核对。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">❓ 如何快速找到某一彩种？</div>
+      <div class="faq-a">可使用顶部搜索功能（即将上线），或通过“内容目录”板块按类别浏览。</div>
+    </div>
+  </div>
+
+  <!-- 再次嵌入链接的句子（自然融入） -->
+  <p style="font-size:0.9rem; color:#515154; margin:1rem 0 0.5rem; text-align:center;">
+    若需进一步了解彩种结构或查阅历史数据，可返回 <a href="https://china-main-500.com">500彩票网</a> 首页获取更多模块。
+  </p>
+
+  <hr>
+
+  <div class="footer-note">
+    本页面仅为知识索引 · 内容仅供参考 · 请合法理性参与
+  </div>
+
+</div>
+</body>
+</html>
